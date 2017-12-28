@@ -197,10 +197,11 @@ if (~isempty(varargin))
                 filename_add = '_TEST';
             case {'num_years'}
                 years_to_save = varargin{in_idx+1};
-                if isa(varargin{in_idx+2},'numeric')
+                if length(varargin)>=(in_idx+2) && isa(varargin{in_idx+2},'numeric')
                     years_to_save_alt = varargin{in_idx+2};
                 else
                     save_alt = false;
+                    years_to_save_alt = 0;
                 end
             case {'save_case'}
                 if strcmp(varargin{in_idx+1},'std')

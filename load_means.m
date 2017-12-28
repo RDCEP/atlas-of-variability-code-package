@@ -76,7 +76,7 @@ keep_warnings = false;
 
 %Set season 'all' to be the default version. Based on no other input flags
 %being 'all' or all upper case, but I think that's pretty easy to keep. 
-if ~isempty(varargin) && isa(varargin{1},'character') && (strcmp(varargin{1},'all') || all(isstrprop(varargin{1},'upper')))
+if ~isempty(varargin) && isa(varargin{1},'char') && (strcmp(varargin{1},'all') || all(isstrprop(varargin{1},'upper')))
    season = varargin{1};
    varargin = varargin(2:end);
 else
